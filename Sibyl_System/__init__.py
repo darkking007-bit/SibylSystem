@@ -112,8 +112,7 @@ def system_cmd(
         args["pattern"] = re.compile(r"[\?\.!/]" + pattern)
     else:
         args["pattern"] = re.compile(r"[\?\.!]" + pattern)
-    if allow_charlie and allow_conquerors:
-        args["from_users"] = CONQUERORS
+    
     elif allow_admirals and allow_charlie:
         args["from_users"] = ADMIRALS
     else:
